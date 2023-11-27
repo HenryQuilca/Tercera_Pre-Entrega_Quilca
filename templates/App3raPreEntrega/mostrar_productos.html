@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block bloque1 %}
+    {% for producto in productos %}
+        <h2>{{producto.nombre}}</h2>
+        <p class="lead mb-0"></p>
+            Precio: {{producto.precio}} soles. <br>
+            Stock: {{producto.stock}} unidades. <br>
+        </p>
+        <hr>
+    {% endfor %}
+{% endblock %}

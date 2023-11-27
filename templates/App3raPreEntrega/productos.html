@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block bloque1 %}
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{ miFormulario.as_p }}
+
+        <input type="submit" value="CrearProducto">
+    </form>
+{% endblock %}

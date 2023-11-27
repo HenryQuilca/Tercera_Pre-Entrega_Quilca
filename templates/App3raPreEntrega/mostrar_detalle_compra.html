@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block bloque1 %}
+    {% for compra in compras %}
+            <b>Cantidad:</b> {{compra.cantidad}} unidades. <br>
+            <b>Fecha de compra:</b> {{compra.fecha_compra}} <br>
+            <b>Dirección:</b> {{compra.direccion}}
+        </p>
+        <hr>
+    {% endfor %}
+{% endblock %}

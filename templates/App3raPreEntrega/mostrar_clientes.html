@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block bloque1 %}
+<div>
+    <form action="/app/buscar/" method="GET">
+
+        {{ miFormulario.as_p }}
+
+        <input type="submit" value="Buscar">
+    </form>
+
+</div>
+    {% for cliente in clientes %}
+        <h2>{{cliente.nombre}} {{cliente.apellido}}</h2>
+        <p class="lead mb-0"></p>
+            Edad: {{cliente.edad}} años. <br>
+            Email: {{cliente.email}}
+        </p>
+        <hr>
+    {% endfor %}
+{% endblock %}
